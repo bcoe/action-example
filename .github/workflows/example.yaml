@@ -8,5 +8,12 @@ jobs:
           SUPER_SECRET: ${{secrets.SUPER_SECRET}}
         with:
           script: |
+            console.info(process.env);
+            console.info(process.env.SUPER_SECRET);
+            console.info(Buffer.from(process.env.SUPER_SECRET, 'utf8').toString('base64'));
+      - uses: actions/github-script@v3
+        with:
+          script: |
+            console.info(process.env);
             console.info(process.env.SUPER_SECRET);
             console.info(Buffer.from(process.env.SUPER_SECRET, 'utf8').toString('base64'));
