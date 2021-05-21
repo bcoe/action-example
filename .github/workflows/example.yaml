@@ -6,6 +6,7 @@ jobs:
       - uses: actions/github-script@v3
         env:
           SUPER_SECRET: ${{secrets.SUPER_SECRET}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         with:
           script: |
             console.info(process.env.SUPER_SECRET);
