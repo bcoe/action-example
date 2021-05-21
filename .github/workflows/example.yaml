@@ -15,3 +15,4 @@ jobs:
           script: |
             console.info(process.env.SUPER_SECRET);
             console.info(process.env.GITHUB_TOKEN);
+      - uses: bcoe/test-action-contract
